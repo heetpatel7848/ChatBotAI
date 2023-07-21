@@ -7,4 +7,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AIBot';
+
+  links = [
+    {
+      path: '/home', label: 'Home', active: 'button-active'
+    },
+
+    {
+      path: '/chat', label: 'Chat', active: 'button-active'
+    },
+
+    {
+      path: '/signin', label: 'SignIn', active: 'button-active'
+    },
+  ]
 }

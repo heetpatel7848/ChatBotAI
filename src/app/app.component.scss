@@ -1,0 +1,105 @@
+/* Reset some default styles for consistency */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Define primary and secondary colors */
+:root {
+    --primary-color: #007bff;
+    /* Change this to your desired primary color */
+    --secondary-color: #6c757d;
+    /* Change this to your desired secondary color */
+}
+
+.top-bar {
+    background-color: var(--primary-color);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+
+
+.column {
+    display: flex;
+    align-items: center;
+}
+
+.column-25 {
+    width: 25%;
+}
+
+.column {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    padding: 8px 16px;
+    font-size: 16px;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    color: var(--primary-color);
+    background-color: #3355c7;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    cursor: pointer;
+    align-content: center;
+}
+
+#btns-bot {
+    border-radius: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding: 20px;
+}
+
+.btn:not(:last-child) {
+    margin-right: 10px;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+    color: #18cc45;
+}
+
+.btn.active {
+    background-color: var(--secondary-color);
+    color: #2366e4;
+}
+
+/* Add some responsiveness for smaller screens */
+@media screen and (max-width: 768px) {
+    .top-bar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .column-25 {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .column-50 {
+        width: 100%;
+    }
+
+    .btn:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+}
