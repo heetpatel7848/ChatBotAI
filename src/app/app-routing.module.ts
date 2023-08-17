@@ -1,15 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { SigninComponent } from './signin/signin.component';
-import { ChatComponent } from './chat/chat.component';
-
+import { ItemComponent } from './item/item.component';
+import { PriceChangeComponent } from './price-change/price-change.component';
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'home' },
-  { path: 'home', component: HomeComponent },
-  { path: 'chat', component: ChatComponent },
-  { path: 'signin', component: SigninComponent }
-
+  { path: 'items', component: ItemComponent },
+  { path: 'price-change', component: PriceChangeComponent }
 ];
 
 @NgModule({

@@ -1,0 +1,18 @@
+<form [formGroup]="itemForm" (submit)="onSubmit()" class="item-form">
+  <label for="itemName">Item Name:</label>
+  <input type="text" id="itemName" formControlName="itemName" />
+
+  <label for="itemCode">Item Code:</label>
+  <input type="text" id="itemCode" formControlName="itemCode" />
+
+  <label for="barcode">Barcode:</label>
+  <input type="text" id="barcode" formControlName="barcode" />
+
+  <label for="cost">Cost:</label>
+  <input type="text" id="cost" formControlName="cost" />
+
+  <label for="price">Price:</label>
+  <input type="text" id="price" formControlName="price" />
+
+  <button type="submit" class="add-button">Add Item</button>
+</form>

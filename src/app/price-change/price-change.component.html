@@ -1,0 +1,74 @@
+<div class="container">
+  <h2 class="price-chnage-heading">Price Change</h2>
+  <form (submit)="onSubmit()">
+    <label for="items">Select Item:</label>
+    <select
+      class="options-items"
+      id="items"
+      [(ngModel)]="selectedItem"
+      name="items"
+    >
+      <option
+        class="items-list"
+        *ngFor="let item of items"
+        [value]="item.itemCode"
+      >
+        {{ item.itemName }}
+      </option>
+    </select>
+    <br />
+
+    <label class="chnage-type-label">Change Type:</label>
+    <label
+      ><input
+        type="radio"
+        name="changeType"
+        [(ngModel)]="changeType"
+        value="increase"
+      />Increase</label
+    >
+    <label
+      ><input
+        type="radio"
+        name="changeType"
+        [(ngModel)]="changeType"
+        value="decrease"
+      />Decrease</label
+    >
+    <br />
+
+    <label class="price-type-label">Price Type:</label>
+    <label
+      ><input
+        type="radio"
+        name="priceType"
+        [(ngModel)]="priceType"
+        value="$"
+      />Dollar ($)</label
+    >
+    <label
+      ><input
+        type="radio"
+        name="priceType"
+        [(ngModel)]="priceType"
+        value="%"
+      />Percentage (%)</label
+    >
+    <br />
+
+    <label class="change-options-label">Change Options:</label>
+    <label
+      ><input type="checkbox" [(ngModel)]="changeOptions.cost" />Change
+      Cost</label
+    >
+    <label
+      ><input type="checkbox" [(ngModel)]="changeOptions.price" />Change
+      Price</label
+    >
+    <br />
+
+    <!-- Display calculated result here -->
+
+    <button type="submit" class="save-chnages-btn">Save Changes</button>
+  </form>
+</div>

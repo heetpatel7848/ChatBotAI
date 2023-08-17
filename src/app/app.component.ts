@@ -6,19 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'AIBot';
+  title = 'PracticalTask';
 
-  links = [
-    {
-      path: '/home', label: 'Home', active: 'button-active'
-    },
-
-    {
-      path: '/chat', label: 'Chat', active: 'button-active'
-    },
-
-    {
-      path: '/signin', label: 'SignIn', active: 'button-active'
-    },
-  ]
 }
